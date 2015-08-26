@@ -1,0 +1,2198 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] ||
+                        function() {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date();
+                a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-3062505-5', 'auto');
+            ga('send', 'pageview');
+        </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+
+
+
+<head>
+    
+    <title>
+        
+            New Zealand Journal of Geology and Geophysics - Volume 33,
+        Issue 3
+            
+        
+
+        
+    </title>
+    <script src="/templates/jsp/ZeroClipboard.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+
+
+
+
+
+
+
+
+
+<meta name="robots" content="noarchive" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="MSSmartTagsPreventParsing" content="true"/>
+
+
+
+
+
+
+
+
+
+
+    
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-3062505-5']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+    
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+    
+
+<link href="/templates/jsp/css/grids-min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" media="screen, projection" href="/cssJawr/gzip_1312511025/style.css" />
+
+
+<link rel="stylesheet" type="text/css" href='/templates/jsp/css/jquery-ui-1.10.2/base/jquery-ui.css' media="screen"/>
+<!--[if IE 6]><link rel="stylesheet" type="text/css" href='/templates/jsp/_style2/_tandf/Includes/css/ie6win.css' media="screen, projection"/><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href='/templates/jsp/_style2/_tandf/Includes/css/ie7win.css' media="screen, projection"/><![endif]-->
+<link rel="stylesheet" type="text/css" href='/templates/jsp/_style2/_tandf/Includes/css/font-awesome.css' media="screen"/>
+
+
+    <script>var _prum=[['id','54ff8819abe53d32281004a5'],['mark','firstbyte',(new Date()).getTime()]];(function(){var s=document.getElementsByTagName('script')[0],p=document.createElement('script');p.async='async';p.src='//rum-static.pingdom.net/prum.min.js';s.parentNode.insertBefore(p,s);})();</script><script type="text/javascript" src="/jsJawr/gzip_N67781991/bundles/tandf.js" ></script>
+
+    
+    
+    <link rel="SHORTCUT ICON" href="/templates/jsp/_style2/_tandf/favicon.ico"/>
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url":"http://www.tandfonline.com/",
+    "potentialAction": {
+    "@type": "SearchAction",
+    "target": "http://www.tandfonline.com/action/doSearch?AllField=%7Bsearch-term%7D&searchLoggingType=google",
+    "query-input": "required name=search-term"
+    }
+    }
+</script>
+
+    <script type="text/javascript">
+<!-- // hide it from old browsers
+
+var anyDbId = -1;
+var sideParts = {
+    citation: "<a href=\"javascript:newWindow('{$linkoutUrl}')\">{$display}<\/a>&nbsp;",
+    citingIsi: "<tr><td class=\"black9pt\" width=\"15\" valign=\"top\">&nbsp;&bull;&nbsp;<\/td><td class=\"black9pt\" valign=\"top\">Search for citing articles in:<br/>&nbsp;<a href=\"javascript:newWindow('/servlet/linkout?suffix=s0&dbid=128&doi={$doi}&url={$urlEnc}')\">ISI Web of Science<\/a> ({$citNum} or more)<\/a><\/td><\/tr>",
+    citingCrossref: "<tr><td class=\"black9pt\" width=\"15\" valign=\"top\">&nbsp;&bull;&nbsp;<\/td><td class=\"black9pt\" valign=\"top\"><a href=\"{$url}\">Citing articles in CrossRef<\/a><\/td><\/tr>",
+    quicksearch: "<option value=\"{$value}\">{$display}<\/option>",
+    related: ", <a href=\"javascript:newWindow('{$linkoutUrl}')\">{$display}<\/a>"
+};
+
+function genSide(part, dbid, linkoutUrl, display, doi, url, citNum, value) {
+    if (dbid != anyDbId && (70368744177663 & dbid) == 0) return;
+    var content = sideParts[part];
+    if (linkoutUrl) { content = content.replace(/{\$linkoutUrl}/g, linkoutUrl); }
+    if (display) { content = content.replace(/{\$display}/g, display); }
+    if (doi) { content = content.replace(/{\$doi}/g, doi); }
+    if (url) {
+        content = content.replace(/{\$url}/g, url);
+        content = content.replace(/{\$urlEnc}/g, encodeURIComponent(encodeURIComponent(url)));
+    }
+    if (citNum) { content = content.replace(/{\$citNum}/g, citNum); }
+    if (value) { content = content.replace(/{\$value}/g, value); }
+    document.write(content);
+}
+
+function hasSfxLinks() {
+	return false;
+}
+
+
+function genSfxLinks(id, url, doi) {
+    if (! doi) { doi = ""; }
+
+}
+function popSfxLink(prefix, id, url, doi) {
+    if (doi) {
+        url += "&id=doi:"+doi;
+    } else {
+        doi = "10.1080%2Ftnzg20.v033.i03";
+    }
+    var redirect = prefix + encodeURIComponent("?sid=tandf&genre=article"+url);
+    var href = "/servlet/linkout?suffix="+id+"&dbid=16384&doi="+doi+"&url=" + encodeURIComponent(redirect);
+    return newWindow(href);
+}
+
+var sfxRefDisplay = {
+64:"[ADS]",
+32:"CAS",
+8192:"CIS",
+256:"CSA",
+16:"[CrossRef]",
+128:"[Web of Science &#0174;]",
+4096:"JSTOR",
+8:"[PubMed]",
+1099511627776: "Ichushi",
+17592186044416: "Medical Online",
+8796093022208: "J-Stage",
+2199023255552: "Medical Finder",
+4398046511104: "Pier Online"
+};
+
+window.onload=disableRefLinkWrite ;
+
+function genRefLink(dbid, id, key, textOfLink) {
+    if (70368744177663 & dbid != 0) {
+        if (typeof textOfLink === "undefined") {
+            if (sfxRefDisplay[dbid].substring(0,1) == "[") {
+                textOfLink = sfxRefDisplay[dbid];
+            } else {
+                textOfLink = "["+sfxRefDisplay[dbid]+"]";
+            }
+            // ToDo: move '[' and ']' to sfxRefDisplay (UPDATE: finish changing sfxRefDisplays and remove this branch)
+        }
+        else{ textOfLink = unescape(textOfLink)};
+
+        if(document.disableRefLinkWrite == null){
+            document.write("<a class='ref' href=\"javascript:popRefLink("+dbid+",'"+id+"','"+key+"')\">"+textOfLink+"<\/a>");
+        }
+    }
+}
+
+function disableRefLinkWrite () {
+    document.disableRefLinkWrite = true;
+}
+
+function popRefLink(dbid, id, key) {
+    var redirect = "/servlet/linkout?suffix=" + id + "&dbid=" + dbid + "&doi=10.1080%2Ftnzg20.v033.i03&key=" + key;
+    return newWindow(redirect);
+}
+function popRefFull(rid, citart, ptype, area) {
+    return popRefImplFull(rid, citart, ptype, area, 600, 500);
+}
+function popRefImplFull(rid, citart, ptype, area, width, height) {
+    var doi = "10.1080%2Ftnzg20.v033.i03";
+    if (! ptype) { ptype = ""; }
+    var pt = rid.charAt(0) + "tnzg20v033i03" + ptype;
+    return popupFull(rid, doi, pt, area, width, height);
+}
+function popRef(rid, citart, ptype, area) {
+    return popRefImpl(rid, citart, ptype, area, 600, 500);
+}
+function popRef2(rid, citart, ptype, area) {
+    return popRefImpl(rid, citart, ptype, area, 400, 100);
+}
+function popRefImpl(rid, citart, ptype, area, width, height) {
+    var doi = "10.1080%2Ftnzg20.v033.i03";
+    if (! citart) { citart = "citart1"; }
+    if (! ptype) { ptype = ""; }
+    var pt = rid.charAt(0) + "tnzg20v033i03" + ptype;
+    return popupRef(citart, rid, doi, pt, area, width, height);
+}
+
+
+var citLinkDisplay = {
+    
+    0:"SYSTEM",
+4:"SYSTEM",
+20:"SYSTEM",
+64:"ADS",
+32:"CAS",
+8192:"CIS",
+256:"CSA",
+16:"CrossRef",
+128:"ISI",
+4096:"JSTOR",
+8:"MEDLINE"
+};
+var feeBasedMask = 4480;
+
+function genCitLink(dbid, suffix, key) {
+    if (dbid != anyDbId && (feeBasedMask & dbid) != 0 && (70368744177663 & dbid) == 0) return;
+
+    var param = "/servlet/linkout?suffix=" + suffix + "&dbid=" + dbid + "&doi=10.1080%2Ftnzg20.v033.i03&key=" + key;
+    var display = citLinkDisplay[dbid];
+    var img = "/templates/jsp/_style2/_tandf/images/" + display + "_btn.gif";
+
+
+    if((typeof tollFreeLinking) != "undefined" && tollFreeLinking[key])
+    {
+        param = param + "&tollfreelink=" + tollFreeLinking[key];
+    }
+
+
+    document.write("<a class='ref' href='javascript:newWindow(\"" + param + "\")'>");
+    document.write("<" + "img src='"+img+"' width='85' height='20' align='BOTTOM' alt='"+display+" Abstract' border='0'/>");
+    document.write("<\/a>");
+}
+// stop hiding -->
+</script>
+
+    <link rel="alternate" type="application/rss+xml" title="RSS - eTOC alert for New Zealand Journal of Geology and Geophysics" href="http://www.tandfonline.com/action/showFeed?ui=0&amp;mi=i4fjsw&amp;ai=1ff&amp;jc=tnzg20&amp;type=etoc&amp;feed=rss" />
+    <link rel="stylesheet" href="/templates/jsp/_style2/_tandf/print.css" media="print" />
+    <!--[if IE 6]>
+    <script type="text/javascript" src="/templates/jsp/_style2/_tandf/Includes/js/DD_belatedPNG.js"></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <link rel="stylesheet" type="text/css" href='/templates/jsp/_style2/_tandf/Includes/css/ie6win.css' media="screen, projection"/>
+    <![endif]-->
+    
+
+
+
+
+
+
+<style type="text/css">
+    /* Taylor & Francis Online */
+    #primaryNav ul li, .button , .headerAd a.button {
+        background-color: #619bcd;
+        background-image: linear-gradient(bottom, #436c8f 7%, #619bcd 54%);
+        background-image: -o-linear-gradient(bottom, #436c8f 7%, #619bcd 54%);
+        background-image: -moz-linear-gradient(bottom, #436c8f 7%, #619bcd 54%);
+        background-image: -webkit-linear-gradient(bottom, #436c8f 7%, #619bcd 54%);
+        background-image: -ms-linear-gradient(bottom, #436c8f 7%, #619bcd 54%);
+    }
+
+    #primaryNav ul li:hover {
+        background-color: #436c8f;
+        background-image: linear-gradient(bottom, #2e4b64 7%, #436c8f 54%);
+        background-image: -o-linear-gradient(bottom, #2e4b64 7%, #436c8f 54%);
+        background-image: -moz-linear-gradient(bottom, #2e4b64 7%, #436c8f 54%);
+        background-image: -webkit-linear-gradient(bottom, #2e4b64 7%, #436c8f 54%);
+        background-image: -ms-linear-gradient(bottom, #2e4b64 7%, #436c8f 54%);
+    }
+
+    #secondaryNav h4 {
+        background-color: #11325f;
+        background-image: linear-gradient(bottom, #0b2342 7%, #11325f 54%);
+        background-image: -o-linear-gradient(bottom, #0b2342 7%, #11325f 54%);
+        background-image: -moz-linear-gradient(bottom, #0b2342 7%, #11325f 54%);
+        background-image: -webkit-linear-gradient(bottom, #0b2342 7%, #11325f 54%);
+        background-image: -ms-linear-gradient(bottom, #0b2342 7%, #11325f 54%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0b2342', endColorstr='#11325f');
+        zoom:1;
+    }
+
+    #secondaryNav h4 a {
+        color: #ffffff;
+    }
+
+    #secondaryNav .accordianPanel h4 {
+        background-color: #2060ba;
+        background-image: linear-gradient(bottom, #164382 7%, #2060ba 54%);
+        background-image: -o-linear-gradient(bottom, #164382 7%, #2060ba 54%);
+        background-image: -moz-linear-gradient(bottom, #164382 7%, #2060ba 54%);
+        background-image: -webkit-linear-gradient(bottom, #164382 7%, #2060ba 54%);
+        background-image: -ms-linear-gradient(bottom, #164382 7%, #2060ba 54%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#164382', endColorstr='#2060ba');
+        zoom:1;
+    }
+
+    #secondaryNav .accordianPanel h4 a {
+        color: #ffffff;
+    }
+
+    #secondaryNav .accordianPanel h4.active {
+        background-color: #fbe844;
+        background-image: linear-gradient(bottom, #afa22f 7%, #fbe844 54%);
+        background-image: -o-linear-gradient(bottom, #afa22f 7%, #fbe844 54%);
+        background-image: -moz-linear-gradient(bottom, #afa22f 7%, #fbe844 54%);
+        background-image: -webkit-linear-gradient(bottom, #afa22f 7%, #fbe844 54%);
+        background-image: -ms-linear-gradient(bottom, #afa22f 7%, #fbe844 54%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#afa22f', endColorstr='#fbe844');
+        zoom:1;
+
+    }
+
+    #secondaryNav .accordianPanel h4.active a {
+        color: #000000;
+    }
+
+    #hd {
+        background-color: #ffffff;
+    }
+
+    #strap {
+        background: #bbf0a0i;
+    }
+
+    a {
+        color: ;
+    }
+
+    #bd .widget h2 {
+        background-color: #4d4d4d !important;
+        background-image: linear-gradient(bottom, #353535 7%, #4d4d4d 54%) !important;;
+        background-image: -o-linear-gradient(bottom, #353535 7%, #4d4d4d 54%) !important;;
+        background-image: -moz-linear-gradient(bottom, #353535 7%, #4d4d4d 54%) !important;;
+        background-image: -webkit-linear-gradient(bottom, #353535 7%, #4d4d4d 54%) !important;;
+        background-image: -ms-linear-gradient(bottom, #353535 7%, #4d4d4d 54%) !important;;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#353535', endColorstr='#4d4d4d') !important;
+        color: #ffffff !important;
+    }
+
+    
+    
+
+</style>
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        
+        <script async defer src="https://www.colwiz.com/pubsol/widget/34000f34a146a2017e2b5acad48d6b07.js"></script>
+    
+
+
+</head>
+
+
+<body class="noscript">
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">document.body.className="script";</script>
+<div id="doc" class="pageJournal">
+    <div id="hd">
+        
+
+
+
+<div class="section clear">
+    <a onclick="this.blur();" onkeypress="this.blur();" class="skipp" tabindex="0"  href="#tandf_content">Skip to content</a>
+    <div class="headerSnip"><p><b>Payment facilities will be unavailable on Taylor &amp; Francis Online between 11pm (UK time), Friday 10th July and 6pm (UK time) Saturday 11th July due to scheduled maintenance. <br /></b></p><p><b>Taylor &amp; Francis Online recently reset password strength requirements. If your login is unsuccessful, please use the 'Forgot password' link to reset your password. Customers with access by IP recognition, remote password, OpenAthens or Shibboleth are not affected.</b></p></div>
+    <!-- branding  -->
+    <a  href="/"><img id="logo" src="/imgJawr/cb3611142202/templates/jsp/_style2/_tandf/images/tandfonline.jpg" alt="Taylor &amp; Francis Online " /></a>
+    <div id="heading_top">
+        <div id="audience" class="nav">
+            <ul class="clear">
+                <li class="librarians">
+                    <a href="/page/librarians">Librarians</a>
+                </li>
+                <li class="authors">
+                    <a href="/page/authors">Authors &amp; Editors</a>
+                </li>
+                <li class="societies last">
+                    <a href="/page/societies">Societies</a>
+                </li>
+            </ul>
+        </div>
+        <div id="login" class="nav">
+
+
+
+
+
+<ul class="clear">
+
+    
+
+
+    
+            <li>
+                <a href="https://www.tandfonline.com/action/registration">
+                    Register
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.tandfonline.com/action/showLogin?uri=%2Ftoc%2Ftnzg20%2F33%2F3">
+                    Sign in
+                </a>
+            </li>
+        
+    <li class="last">
+        <a href="https://www.tandfonline.com/pairdevice">
+            Mobile
+        </a>
+    </li>
+</ul>
+</div>
+        
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+<div id="branding">
+    <div id="accessImageDiv">
+        
+    </div>
+
+    <p>
+        
+            <span>Access provided by</span> GNS Science
+        
+    </p>
+
+</div>
+<!-- /branding  -->
+
+
+    <div id="primaryNav" class="nav">
+
+
+<ul class="clear clearfix">
+    <li class="home ">
+        <a href="/"><img src="/imgJawr/cb2040490533/templates/jsp/_style2/_tandf/images/home_icon.png" alt="Home" /></a>
+    </li>
+    <li class="browse ">
+        <a href="/action/showPublications">Browse</a>
+    </li>
+    <li class="products ">
+        <a href="/page/products">Products</a>
+    </li>
+    <li class="open_access ">
+        <a href="/page/openaccess">Open access</a>
+    </li>
+    <li class="utils ">
+        <a href="/action/showPreferences?menuTab=favorites">Shortlist</a>
+    </li>
+    <li class="utils last  cartMenuItem">
+        <a href="https://www.tandfonline.com/action/showCart" class="cartLink">
+            <img src="/imgJawr/cb133812330/templates/jsp/_style2/_tandf/images/cart_icon.png" alt="Shopping Cart" />
+            
+                    Cart
+                
+        </a>
+    </li>
+</ul></div>
+</div>
+<div id="strap">
+    <div class="section clear">
+        The online platform for Taylor &amp; Francis Group content
+    </div>
+</div>
+    </div>
+    <div id="bd">
+            
+            <div class="section">
+                
+                    <div id="cookieBanner" class="cookieBanner">
+                        <h4  class="b-header">Cookies Notification</h4>
+                        <div  class="b-body" style="padding-bottom: 5px;">
+                            This site uses cookies. By continuing to browse the site you are agreeing to our use of cookies. <a href="/page/privacy-policy">Find out more.</a>
+                            <input id="banner-proceed-button" type="button" value="Accept"/>
+                        </div>
+                    </div>
+                
+            
+                
+
+
+    <div id="primarySubjects" class="module">
+
+
+
+
+
+
+
+
+
+        
+        
+        
+    
+
+
+
+
+
+
+        <div id="subjectSearch">
+            <div class="gutter clear">
+                <form action="/action/doSearch" name="quickSearchLineForm" method="get"><input id="hiddenJournalCodeSimple" type="hidden" name="quickLinkJournal" value="" />
+                    <input id="hiddenJournalTextSimple" type="hidden" name="journalText" value="" />
+                    
+                    
+                    
+                    
+                    
+                    <div class="clear">
+                        <fieldset>
+                            <div class="search">
+                                <span>
+                                    <label class="hide" for="XuiTxtSubjectSearch">
+                                        Search
+                                    </label>
+                                    <input id="XuiTxtSubjectSearch" class="text" type="text" name="AllField" value="" size="15" />
+                                    <div id="journalSearchWrapperSimple"></div>
+                                </span>
+                            </div>
+                            
+
+
+
+
+
+        <input class="button " type="submit" name="" value="Search" />
+    
+
+                            <a href="/search/advanced?pubType=journal" class="advance advancedLink" title="Advanced and citation search">
+                                Advanced and citation search
+                            </a>
+                            <span class="searchFilter">
+                                <input onclick="checkSearchType(1);" id="uiRadWithinCurrent" class="radio" type="radio" name="publication" value="40001568" checked="checked" />
+                                <label for="uiRadWithinCurrent">
+                                    Within current journal
+                                </label>
+
+                                <input onclick="checkSearchType(2);" id="uiRadEntireSite" class="radio" type="radio" name="publication" value="" />
+                                <label for="uiRadEntireSite">
+                                    Entire site
+                                </label>
+                            </span>
+                        </fieldset>
+                    </div></form>
+            </div>
+
+        </div>
+    </div>
+
+                
+
+
+
+<div id="breadcrumb">
+    
+        <a href='/' >Home</a>
+         &gt; 
+    
+        <a href='/loi/tnzg20' >List of Issues</a>
+         &gt; 
+    
+        Table of Contents
+        
+    
+</div>
+
+
+            
+            
+            <div id="tandf_content">
+                <div class="clear">
+            
+
+
+
+<div id="unit1" class="unit">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="secondaryNav" class="module accordian">
+    <div class="gutter">
+        
+        <h4 class="accordianHeader disclosure active">
+            <a href="#">Browse journal</a>
+        </h4>
+        <div class="accordianPanel">
+            
+            <h4>
+                <a href="/loi/tnzg20">
+                    View all volumes and issues
+                </a>
+            </h4>
+            <h4>
+                <a href="/toc/tnzg20/current">
+                    Current issue
+                </a>
+            </h4>
+
+            
+            
+                <h4>
+                    <a href="/action/showAxaArticles?journalCode=tnzg20">
+                        Latest articles
+                    </a>
+                </h4>
+            
+
+            
+                <h4>
+                    <a href="/action/showMostReadArticles?journalCode=tnzg20">
+                        Most read articles
+                    </a>
+                </h4>
+            
+
+            
+                <h4>
+                    <a href="/action/showMostCitedArticles?journalCode=tnzg20">
+                        Most cited articles
+                    </a>
+                </h4>
+            
+
+            
+
+            
+                <h4  >
+                    <a href="/action/showOpenAccess?journalCode=tnzg20">
+                        Open access articles
+                    </a>
+                </h4>
+            
+        </div>
+
+        
+
+        
+            <h4 class="accordianHeader disclosure ">
+                <a href="#">Submit</a>
+            </h4>
+
+            <div class="accordianPanel noscript">
+                
+                    <h4>
+                        <a href="/action/authorSubmission?journalCode=tnzg20&amp;page=paper">
+                            Call for papers
+                        </a>
+                    </h4>
+                
+                
+                    <h4>
+                        <a href="/action/authorSubmission?journalCode=tnzg20&amp;page=instructions">
+                            Instructions for authors
+                        </a>
+                    </h4>
+                
+                
+                
+                    <h4>
+                        <a target="_blank" href="http://mc.manuscriptcentral.com/rsnz">
+                            Submit online
+                        </a>
+                    </h4>
+                
+            </div>
+        
+
+        
+            <h4>
+                <a href="/pricing/journal/tnzg20">
+                    Subscribe
+                </a>
+            </h4>
+        
+
+        
+            <h4 class="accordianHeader disclosure ">
+                <a href="#">About this journal</a>
+            </h4>
+            <div class="accordianPanel noscript">
+
+                
+                
+                    
+                    
+
+                        <h4>
+                            <a href="/action/journalInformation?show=aimsScope&amp;journalCode=tnzg20">
+                                Aims &amp; scope
+                            </a>
+                        </h4>
+                        
+                            <h4>
+                                <a href="/action/journalInformation?journalCode=tnzg20">
+                                    Journal information
+                                </a>
+                            </h4>
+                        
+
+                    
+                
+                    
+                    
+
+                        <h4>
+                            <a href="/action/journalInformation?show=editorialBoard&amp;journalCode=tnzg20">
+                                Editorial board
+                            </a>
+                        </h4>
+                        
+
+                    
+                
+                    
+                    
+
+                        <h4>
+                            <a href="/action/journalInformation?show=abstractingIndexing&amp;journalCode=tnzg20">
+                                Abstracting &amp; indexing
+                            </a>
+                        </h4>
+                        
+
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+            </div>
+
+            
+                <h4>
+                    <a href="/action/newsAndOffers?journalCode=tnzg20">
+                        News &amp; offers
+                    </a>
+                </h4>
+            
+        
+    </div>
+</div>
+
+
+
+
+    <br/>
+    <div>
+        <!-- Rendering Menu: TFO_society_menu -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="ad module">
+        <!-- Literatum Advertisement -->
+        <!-- width:160 -->
+        <!-- height:400 -->
+        <!-- placeholder id=null, description=Journal left column -->
+        <!-- /Literatum Advertisement -->
+    </div>
+
+    
+</div>
+
+
+            <div id="journal_content">
+                <div id="pubContentMath" class="hideMathJax">
+                    
+        <div id="unit2" class="unit">
+            <!-- journal overview module -->
+            
+            
+
+            <!-- placeholder id=null, description=Journal Top 1 -->
+
+            <div class="overview borderedmodule-last">
+                <div class="hd">
+                    <h2>
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                    <a href="/loi/tnzg20?open=33#vol_33">Volume 33</a>,
+                
+    
+
+
+
+
+
+
+    
+    
+
+    
+
+
+    
+
+    
+            Issue 3,
+        
+
+1990
+
+
+
+
+
+
+<span style="float: right;margin-right: 5px">
+
+    
+        <a href="http://www.tandfonline.com/toc/tnzg20/33/2" title="Previous issue">&lt; Prev</a>
+    
+
+
+    
+        |
+    
+
+    
+        <a href="http://www.tandfonline.com/toc/tnzg20/33/4" title="Next issue">Next &gt;</a>
+    
+</span>
+                    </h2>
+                </div>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bd clearfix">
+    <div class="left clearfix">
+        <div class="figure">
+            
+            <img class="cover" src="/na101/home/literatum/publisher/tandf/journals/content/tnzg20/1990/tnzg20.v033.i03/tnzg20.v033.i03/production/tnzg20.v033.i03.cover.jpg" alt="New Zealand Journal of Geology and Geophysics" />
+        </div>
+
+
+        <div class="options">
+            <ul style="clear:both">
+                <li class="publisherImprint">
+                    Taylor & Francis
+                </li>
+
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a href="/page/sample-content">
+                            Sample this title
+                        </a>
+                    </li>
+                
+
+                <li class="last">
+                    <noscript>
+                        <a href="/action/doUpdateAlertSettings?action=addJournal&amp;journalCode=tnzg20&amp;referrer=%2Ftoc%2Ftnzg20%2F33%2F3">
+                            New content email alert
+                        </a>
+                    </noscript>
+                    <div class="alertMeDiv script_only">
+                        <a  class="alert dropDownLabel" href="#">
+                            Alert&nbsp;me
+                        </a>
+                        <div class="dropDown dropDownAlt" style="right: -13px; top: 27px;" >
+                            <div class="bd">
+                                <ul>
+                                    <li>
+                                        <a href="/action/doUpdateAlertSettings?action=addJournal&amp;journalCode=tnzg20&amp;referrer=%2Ftoc%2Ftnzg20%2F33%2F3">
+                                            New content email alert
+                                        </a>
+                                    </li>
+                                    <li>
+                                        
+
+
+
+
+
+
+
+
+
+
+    <a href="http://www.tandfonline.com/action/showFeed?ui=0&mi=i4fjsw&ai=1ff&jc=tnzg20&type=etoc&feed=rss">
+        
+        New content RSS feed
+    </a>
+
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ft"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="right description">
+        <h1 class="topArticleMetaTitle">
+            New Zealand Journal of Geology and Geophysics
+        </h1>
+
+        
+
+        <div class="icons clear journalOverviewAds">
+            <ul class="clear">
+                <li>
+                    <!-- Literatum Advertisement -->
+                    <!-- placeholder id=null, description=Journal society logo --><img src="/sda/1296/SocietyLogo-RSNZ.gif" width="80" height="80" title="The Royal Society of New Zealand" alt="The Royal Society of New Zealand"/>
+                    <!-- /Literatum Advertisement -->
+                </li>
+
+                <li>
+                    <!-- Literatum Advertisement -->
+                    <!-- placeholder id=null, description=Journal iOpen or iFirst --><a href="#" onclick="location='http://www.tandfonline.com/page/openaccess/openselect'"><img src="/sda/6495/tf-open-select.gif" width="80" height="41" alt="Open Select journals"/></a>
+                    <!-- /Literatum Advertisement -->
+                </li>
+
+                
+                    <li>
+                        <img src="/imgJawr/cb4005423404/templates/jsp/_style2/_tandf/images/peer-review-integrity-logo.gif" alt="Peer Review Integrity" />
+                    </li>
+                
+            </ul>
+
+            
+                <div class="clear floatclear">
+                    
+
+
+
+
+    <a href="http://www.tandf.co.uk/journals/rsnz-journals">
+
+
+A Publication of the Royal Society of New Zealand
+
+
+    </a>
+
+
+
+                </div>
+            
+            <div class="clear floatclear"> </div>
+        </div>
+    </div>
+
+    <div class="bodyFooterContent clear floatclear" style="margin-bottom: -15px">
+        <div class="left">
+            <b>ISSN</b>
+            <br />
+            0028-8306 (Print), 
+            1175-8791 (Online)
+        </div>
+        <div class="right">
+
+
+            
+
+            <b>
+                Publication Frequency
+            </b>
+            <br/>
+            4 issues per year
+        </div>
+        <div class="clear"> </div>
+    </div>
+
+    <div class="clear floatclear"> </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="social clear" style="margin-top: 10px;">
+    <ul>
+        <li class="share">
+            
+
+<script type="text/javascript">
+    var addthis_config = {
+        ui_cobrand: "Taylor &amp; Francis Online",
+        services_compact: "citeulike,netvibes,twitter,technorati,delicious,linkedin,facebook,stumbleupon,digg,google,more",
+        pubid: "ra-4dff56cd6bb1830b"
+    };
+</script>
+
+<!-- AddThis Button BEGIN -->
+        
+                <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+                <a class="addthis_button_preferred_1"></a>
+                <a class="addthis_button_preferred_2"></a>
+                <a class="addthis_button_preferred_3"></a>
+                <a class="addthis_button_compact"></a>
+                </div>
+                <script type="text/javascript">var addthis_config = {"data_track_addressbar":true,"ui_click":true};</script>
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4dff56cd6bb1830b"></script>
+            
+<!-- AddThis Button END -->
+
+        </li>
+        <li class="add" style='margin-top:10px';>
+            
+                    <a href="/personalize/addFavoritePublication?doi=10.1080%2Ftnzg20">
+                        Add to shortlist
+                    </a>
+                
+
+        </li>
+
+        
+
+        
+    </ul>
+
+    <ul class="recommend" style='margin-top:10px';>
+        <li class="rec">
+            Recommend to:
+        </li>
+        <li class="friend">
+            
+                    
+                
+
+            
+
+            <a href="/action/showMailPage?href=%2Ftoc%2Ftnzg20%2Fcurrent&amp;title=New+Zealand+Journal+of+Geology+and+Geophysics&amp;type=journal&amp;doi=10.1080%2Ftnzg20">
+                
+                
+                
+                
+
+                A friend
+            </a>
+        </li>
+
+        
+            <li class="librarian">
+                <a href="/action/recommendation?doi=10.1080%2Ftnzg20">
+                    A librarian
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+
+
+            </div>
+
+            <form name="frmAbs" action="">
+                
+
+
+
+<div class="actions script_only">
+    <div class="gutter clear">
+
+        <div class="markall">
+            <input type="checkbox" name="markall" id="markall0" class="markall" />
+            <label for="markall0">
+                To select/unselect all items click here
+            </label>
+        </div>
+
+        <div class="choose dropDownLabel">
+            <a href="#">
+                Choose an action
+            </a>
+        </div>
+        <div class="dropDown" style="top: 22px;right:8px;width:123px">
+            <ul>
+                <li>
+                    <a href="#" onclick="submitArticles(document.frmAbs, '/personalize/addFavoritePublication')">
+                        Add to shortlist
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#" onclick="submitArticles(document.frmAbs, '/action/showCitFormats')">
+                        Download citation
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+                
+
+                
+
+                <!--totalCount14--><!--modified:1436667237000--><!--ARTICLE: primary_article--><div class="article original as2"><h2 class="clear tocheading"><span class="subj-group">Marine geology </span></h2><div class="gutter"><div class="field script_only"><input type="checkbox" name="doi" value="10.1080/00288306.1990.10425696" id="10.1080/00288306.1990.10425696" /></div><label for="10.1080/00288306.1990.10425696"><a class="entryTitle" href="/doi/abs/10.1080/00288306.1990.10425696"><h3>Basement geology of the Campbell Plateau: Implications for correlation of the Campbell Magnetic Anomaly System</h3></a></label><span class="subtitle"></span><h4><span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Beggs%2C+J+M">J. M. Beggs</a></span>, <span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Challis%2C+G+A">G. A. Challis</a></span> &amp; <span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Cook%2C+R+A">R. A. Cook</a></span><br />pages 401-404</h4><div class="access accessmodule access_free"><a class="pdf last" target="_blank" href="/doi/pdf/10.1080/00288306.1990.10425696">Download full text</a><div class="accessIconWrapper access_free accessIcon">Free access</div></div><ul class="clear doimetalist"><li><strong>DOI:</strong>10.1080/00288306.1990.10425696</li><li><strong>Published online:</strong> 12 Jan 2012</li><li><div><strong>Citing Articles:</strong></div><a href="/doi/citedby/10.1080/00288306.1990.10425696" >CrossRef (6)</a>&nbsp; | <a target='_blank' href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=CitingArticles&KeyUT=A1990FA90500001" >Web of Science (18)</a>&nbsp;</li><li><div class="articleUsage"><strong>Article Views:</strong> 110<div class="auPopUp"><div class="pointyEdge"></div>Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></div>
+<noscript><br/><div class="articleUsage">Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></noscript></li><li><div class="altmetricScore" data="10.1080/00288306.1990.10425696"></div></li></ul><div class="ft"><h6>Further Information</h6><ul class="entryLinks clear"><li class="firstEntryLink"><a href="/doi/abs/10.1080/00288306.1990.10425696">Abstract</a></li><li class="relatedArticleLink"><a href="/doi/mlt/10.1080/00288306.1990.10425696">
+
+                        Related articles
+
+                    </a></li><?xml version="1.0" encoding="UTF-8"?><li></li></ul></div><div class="clear floatclear"></div></div></div><!--ARTICLE: primary_article--><div class="article original as2"><h2 class="clear tocheading"><span class="subj-group">Meteorology </span></h2><div class="gutter"><div class="field script_only"><input type="checkbox" name="doi" value="10.1080/00288306.1990.10425697" id="10.1080/00288306.1990.10425697" /></div><label for="10.1080/00288306.1990.10425697"><a class="entryTitle" href="/doi/abs/10.1080/00288306.1990.10425697"><h3>Snowpack structure and avalanching, Craigieburn Range, New Zealand</h3></a></label><span class="subtitle"></span><h4><span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=McGregor%2C+G+R">Glenn R. McGregor</a></span><br />pages 405-417</h4><div class="access accessmodule access_free"><a class="pdf last" target="_blank" href="/doi/pdf/10.1080/00288306.1990.10425697">Download full text</a><div class="accessIconWrapper access_free accessIcon">Free access</div></div><ul class="clear doimetalist"><li><strong>DOI:</strong>10.1080/00288306.1990.10425697</li><li><strong>Published online:</strong> 12 Jan 2012</li><li><div><strong>Citing articles:</strong> 0</div></li><li><div class="articleUsage"><strong>Article Views:</strong> 39<div class="auPopUp"><div class="pointyEdge"></div>Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></div>
+<noscript><br/><div class="articleUsage">Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></noscript></li><li><div class="altmetricScore" data="10.1080/00288306.1990.10425697"></div></li></ul><div class="ft"><h6>Further Information</h6><ul class="entryLinks clear"><li class="firstEntryLink"><a href="/doi/abs/10.1080/00288306.1990.10425697">Abstract</a></li><li class="relatedArticleLink"><a href="/doi/mlt/10.1080/00288306.1990.10425697">
+
+                        Related articles
+
+                    </a></li><li></li></ul></div><div class="clear floatclear"></div></div></div><!--ARTICLE: primary_article--><div class="article original as2"><h2 class="clear tocheading"><span class="subj-group">Mineralisation </span></h2><div class="gutter"><div class="field script_only"><input type="checkbox" name="doi" value="10.1080/00288306.1990.10425698" id="10.1080/00288306.1990.10425698" /></div><label for="10.1080/00288306.1990.10425698"><a class="entryTitle" href="/doi/abs/10.1080/00288306.1990.10425698"><h3>Ferromanganese nodules of the Southwestern Pacific: Results of Soviet investigations</h3></a></label><span class="subtitle"></span><h4><span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Skornyakova%2C+N+S">N. S. Skornyakova</a></span>, <span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Murdmaa%2C+I+O">I. O. Murdmaa</a></span>, <span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Krasnov%2C+S+G">S. G. Krasnov</a></span> &amp; <span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Uspenskaya%2C+T+Y">T.   Yu Uspenskaya</a></span><br />pages 419-437</h4><div class="access accessmodule access_free"><a class="pdf last" target="_blank" href="/doi/pdf/10.1080/00288306.1990.10425698">Download full text</a><div class="accessIconWrapper access_free accessIcon">Free access</div></div><ul class="clear doimetalist"><li><strong>DOI:</strong>10.1080/00288306.1990.10425698</li><li><strong>Published online:</strong> 12 Jan 2012</li><li><div><strong>Citing articles:</strong> 0</div></li><li><div class="articleUsage"><strong>Article Views:</strong> 36<div class="auPopUp"><div class="pointyEdge"></div>Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></div>
+<noscript><br/><div class="articleUsage">Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></noscript></li><li><div class="altmetricScore" data="10.1080/00288306.1990.10425698"></div></li></ul><div class="ft"><h6>Further Information</h6><ul class="entryLinks clear"><li class="firstEntryLink"><a href="/doi/abs/10.1080/00288306.1990.10425698">Abstract</a></li><li class="relatedArticleLink"><a href="/doi/mlt/10.1080/00288306.1990.10425698">
+
+                        Related articles
+
+                    </a></li><li></li></ul></div><div class="clear floatclear"></div></div></div><!--ARTICLE: primary_article--><div class="article original as2"><h2 class="clear tocheading"><span class="subj-group">Palynology </span></h2><div class="gutter"><div class="field script_only"><input type="checkbox" name="doi" value="10.1080/00288306.1990.10425699" id="10.1080/00288306.1990.10425699" /></div><label for="10.1080/00288306.1990.10425699"><a class="entryTitle" href="/doi/abs/10.1080/00288306.1990.10425699"><h3>Extinct palynomorphs from middle and late Pleistocene terrestrial sediments, South Wanganui Basin, New Zealand</h3></a></label><span class="subtitle"></span><h4><span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Bussell%2C+M+R">M.   Royd Bussell</a></span> &amp; <span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Mildenhall%2C+D+C">D. C. Mildenhall</a></span><br />pages 439-447</h4><div class="access accessmodule access_free"><a class="pdf last" target="_blank" href="/doi/pdf/10.1080/00288306.1990.10425699">Download full text</a><div class="accessIconWrapper access_free accessIcon">Free access</div></div><ul class="clear doimetalist"><li><strong>DOI:</strong>10.1080/00288306.1990.10425699</li><li><strong>Published online:</strong> 12 Jan 2012</li><li><div><strong>Citing Articles:</strong></div><a href="/doi/citedby/10.1080/00288306.1990.10425699" >CrossRef (9)</a>&nbsp; | <a target='_blank' href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=CitingArticles&KeyUT=A1990FA90500004" >Web of Science (14)</a>&nbsp;</li><li><div class="articleUsage"><strong>Article Views:</strong> 72<div class="auPopUp"><div class="pointyEdge"></div>Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></div>
+<noscript><br/><div class="articleUsage">Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></noscript></li><li><div class="altmetricScore" data="10.1080/00288306.1990.10425699"></div></li></ul><div class="ft"><h6>Further Information</h6><ul class="entryLinks clear"><li class="firstEntryLink"><a href="/doi/abs/10.1080/00288306.1990.10425699">Abstract</a></li><li class="relatedArticleLink"><a href="/doi/mlt/10.1080/00288306.1990.10425699">
+
+                        Related articles
+
+                    </a></li><?xml version="1.0" encoding="UTF-8"?><li></li></ul></div><div class="clear floatclear"></div></div></div><!--ARTICLE: primary_article--><div class="article original as2"><h2 class="clear tocheading"><span class="subj-group">Quaternary geology </span></h2><div class="gutter"><div class="field script_only"><input type="checkbox" name="doi" value="10.1080/00288306.1990.10425700" id="10.1080/00288306.1990.10425700" /></div><label for="10.1080/00288306.1990.10425700"><a class="entryTitle" href="/doi/abs/10.1080/00288306.1990.10425700"><h3>Dated Ohakean terraces offset by the Wellington Fault, near Woodville, New Zealand</h3></a></label><span class="subtitle"></span><h4><span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Marden%2C+M">M. Marden</a></span> &amp; <span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Neall%2C+V+E">V. E. Neall</a></span><br />pages 449-453</h4><div class="access accessmodule access_free"><a class="pdf last" target="_blank" href="/doi/pdf/10.1080/00288306.1990.10425700">Download full text</a><div class="accessIconWrapper access_free accessIcon">Free access</div></div><ul class="clear doimetalist"><li><strong>DOI:</strong>10.1080/00288306.1990.10425700</li><li><strong>Published online:</strong> 12 Jan 2012</li><li><div><strong>Citing Articles:</strong></div><a href="/doi/citedby/10.1080/00288306.1990.10425700" >CrossRef (3)</a>&nbsp; | <a target='_blank' href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=CitingArticles&KeyUT=A1990FA90500005" >Web of Science (18)</a>&nbsp;</li><li><div class="articleUsage"><strong>Article Views:</strong> 63<div class="auPopUp"><div class="pointyEdge"></div>Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></div>
+<noscript><br/><div class="articleUsage">Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></noscript></li><li><div class="altmetricScore" data="10.1080/00288306.1990.10425700"></div></li></ul><div class="ft"><h6>Further Information</h6><ul class="entryLinks clear"><li class="firstEntryLink"><a href="/doi/abs/10.1080/00288306.1990.10425700">Abstract</a></li><li class="relatedArticleLink"><a href="/doi/mlt/10.1080/00288306.1990.10425700">
+
+                        Related articles
+
+                    </a></li><?xml version="1.0" encoding="UTF-8"?><li></li></ul></div><div class="clear floatclear"></div></div></div><!--ARTICLE: primary_article--><div class="article original as2"><h2 class="clear tocheading"><span class="subj-group">Stratigraphy </span></h2><div class="gutter"><div class="field script_only"><input type="checkbox" name="doi" value="10.1080/00288306.1990.10425701" id="10.1080/00288306.1990.10425701" /></div><label for="10.1080/00288306.1990.10425701"><a class="entryTitle" href="/doi/abs/10.1080/00288306.1990.10425701"><h3>Exotic thrust sheets with rafts of locally derived strata: Northland Allochthon in Waihou Valley, Northland, New Zealand</h3></a></label><span class="subtitle"></span><h4><span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Evans%2C+R+B">R. B. Evans</a></span> &amp; <span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Hayward%2C+B+W">B. W. Hayward</a></span><br />pages 455-464</h4><div class="access accessmodule access_free"><a class="pdf last" target="_blank" href="/doi/pdf/10.1080/00288306.1990.10425701">Download full text</a><div class="accessIconWrapper access_free accessIcon">Free access</div></div><ul class="clear doimetalist"><li><strong>DOI:</strong>10.1080/00288306.1990.10425701</li><li><strong>Published online:</strong> 12 Jan 2012</li><li><div><strong>Citing Articles:</strong></div><a href="/doi/citedby/10.1080/00288306.1990.10425701" >CrossRef (5)</a>&nbsp; | <a target='_blank' href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=CitingArticles&KeyUT=A1990FA90500006" >Web of Science (5)</a>&nbsp;</li><li><div class="articleUsage"><strong>Article Views:</strong> 41<div class="auPopUp"><div class="pointyEdge"></div>Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></div>
+<noscript><br/><div class="articleUsage">Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></noscript></li><li><div class="altmetricScore" data="10.1080/00288306.1990.10425701"></div></li></ul><div class="ft"><h6>Further Information</h6><ul class="entryLinks clear"><li class="firstEntryLink"><a href="/doi/abs/10.1080/00288306.1990.10425701">Abstract</a></li><li class="relatedArticleLink"><a href="/doi/mlt/10.1080/00288306.1990.10425701">
+
+                        Related articles
+
+                    </a></li><?xml version="1.0" encoding="UTF-8"?><li></li></ul></div><div class="clear floatclear"></div></div></div><!--ARTICLE: primary_article--><div class="article original as2"><h2 class="clear tocheading"><span class="subj-group">Structural geology </span></h2><div class="gutter"><div class="field script_only"><input type="checkbox" name="doi" value="10.1080/00288306.1990.10425702" id="10.1080/00288306.1990.10425702" /></div><label for="10.1080/00288306.1990.10425702"><a class="entryTitle" href="/doi/abs/10.1080/00288306.1990.10425702"><h3>Geology of crystalline rocks of northern Fiordland: Details of the granulite facies Western Fiordland Orthogneiss and associated rock units</h3></a></label><span class="subtitle"></span><h4><span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Bradshaw%2C+J+Y">J. Y. Bradshaw</a></span><br />pages 465-484</h4><div class="access accessmodule access_free"><a class="pdf last" target="_blank" href="/doi/pdf/10.1080/00288306.1990.10425702">Download full text</a><div class="accessIconWrapper access_free accessIcon">Free access</div></div><ul class="clear doimetalist"><li><strong>DOI:</strong>10.1080/00288306.1990.10425702</li><li><strong>Published online:</strong> 12 Jan 2012</li><li><div><strong>Citing Articles:</strong></div><a href="/doi/citedby/10.1080/00288306.1990.10425702" >CrossRef (12)</a>&nbsp; | <a target='_blank' href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=CitingArticles&KeyUT=A1990FA90500007" >Web of Science (58)</a>&nbsp;</li><li><div class="articleUsage"><strong>Article Views:</strong> 102<div class="auPopUp"><div class="pointyEdge"></div>Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></div>
+<noscript><br/><div class="articleUsage">Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></noscript></li><li><div class="altmetricScore" data="10.1080/00288306.1990.10425702"></div></li></ul><div class="ft"><h6>Further Information</h6><ul class="entryLinks clear"><li class="firstEntryLink"><a href="/doi/abs/10.1080/00288306.1990.10425702">Abstract</a></li><li class="relatedArticleLink"><a href="/doi/mlt/10.1080/00288306.1990.10425702">
+
+                        Related articles
+
+                    </a></li><?xml version="1.0" encoding="UTF-8"?><li></li></ul></div><div class="clear floatclear"></div></div></div><!--ARTICLE: primary_article--><div class="article original as2"><div class="gutter"><div class="field script_only"><input type="checkbox" name="doi" value="10.1080/00288306.1990.10425703" id="10.1080/00288306.1990.10425703" /></div><label for="10.1080/00288306.1990.10425703"><a class="entryTitle" href="/doi/abs/10.1080/00288306.1990.10425703"><h3>Late Cenozoic thrust tectonics, Picton, New Zealand</h3></a></label><span class="subtitle"></span><h4><span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Nicol%2C+A">A. Nicol</a></span> &amp; <span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Campbell%2C+J+K">J. K. Campbell</a></span><br />pages 485-494</h4><div class="access accessmodule access_free"><a class="pdf last" target="_blank" href="/doi/pdf/10.1080/00288306.1990.10425703">Download full text</a><div class="accessIconWrapper access_free accessIcon">Free access</div></div><ul class="clear doimetalist"><li><strong>DOI:</strong>10.1080/00288306.1990.10425703</li><li><strong>Published online:</strong> 12 Jan 2012</li><li><div><strong>Citing Articles:</strong></div><a href="/doi/citedby/10.1080/00288306.1990.10425703" >CrossRef (6)</a>&nbsp; | <a target='_blank' href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&DestApp=WOS_CPL&UsrCustomerID=5e3815c904498985e796fc91436abd9a&SrcAuth=atyponcel&SrcApp=literatum&DestLinkType=CitingArticles&KeyUT=A1990FA90500008" >Web of Science (10)</a>&nbsp;</li><li><div class="articleUsage"><strong>Article Views:</strong> 42<div class="auPopUp"><div class="pointyEdge"></div>Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></div>
+<noscript><br/><div class="articleUsage">Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></noscript></li><li><div class="altmetricScore" data="10.1080/00288306.1990.10425703"></div></li></ul><div class="ft"><h6>Further Information</h6><ul class="entryLinks clear"><li class="firstEntryLink"><a href="/doi/abs/10.1080/00288306.1990.10425703">Abstract</a></li><li class="relatedArticleLink"><a href="/doi/mlt/10.1080/00288306.1990.10425703">
+
+                        Related articles
+
+                    </a></li><?xml version="1.0" encoding="UTF-8"?><li></li></ul></div><div class="clear floatclear"></div></div></div><!--ARTICLE: primary_article--><div class="article original as2"><div class="gutter"><div class="field script_only"><input type="checkbox" name="doi" value="10.1080/00288306.1990.10425704" id="10.1080/00288306.1990.10425704" /></div><label for="10.1080/00288306.1990.10425704"><a class="entryTitle" href="/doi/abs/10.1080/00288306.1990.10425704"><h3>Structural geology of Suva Peninsula and Harbour and its implications for the Neogene tectonics of Fiji</h3></a></label><span class="subtitle"></span><h4><span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Shorten%2C+G+G">G. G. Shorten</a></span><br />pages 495-506</h4><div class="access accessmodule access_free"><a class="pdf last" target="_blank" href="/doi/pdf/10.1080/00288306.1990.10425704">Download full text</a><div class="accessIconWrapper access_free accessIcon">Free access</div></div><ul class="clear doimetalist"><li><strong>DOI:</strong>10.1080/00288306.1990.10425704</li><li><strong>Published online:</strong> 12 Jan 2012</li><li><div><strong>Citing articles:</strong> 0</div></li><li><div class="articleUsage"><strong>Article Views:</strong> 176<div class="auPopUp"><div class="pointyEdge"></div>Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></div>
+<noscript><br/><div class="articleUsage">Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></noscript></li><li><div class="altmetricScore" data="10.1080/00288306.1990.10425704"></div></li></ul><div class="ft"><h6>Further Information</h6><ul class="entryLinks clear"><li class="firstEntryLink"><a href="/doi/abs/10.1080/00288306.1990.10425704">Abstract</a></li><li class="relatedArticleLink"><a href="/doi/mlt/10.1080/00288306.1990.10425704">
+
+                        Related articles
+
+                    </a></li><li></li></ul></div><div class="clear floatclear"></div></div></div><!--ARTICLE: primary_short--><div class="article original as2"><h2 class="clear tocheading"><span class="subj-group">Note </span></h2><div class="gutter"><div class="field script_only"><input type="checkbox" name="doi" value="10.1080/00288306.1990.10425705" id="10.1080/00288306.1990.10425705" /></div><label for="10.1080/00288306.1990.10425705"><a class="entryTitle" href="/doi/abs/10.1080/00288306.1990.10425705"><h3>Use of magnetic susceptibility anisotropy in the study of the matrix fabric of frost-disturbed soils</h3></a></label><span class="subtitle"></span><h4><span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Warburton%2C+J">Jeff Warburton</a></span><br />pages 507-510</h4><div class="access accessmodule access_free"><a class="pdf last" target="_blank" href="/doi/pdf/10.1080/00288306.1990.10425705">Download full text</a><div class="accessIconWrapper access_free accessIcon">Free access</div></div><ul class="clear doimetalist"><li><strong>DOI:</strong>10.1080/00288306.1990.10425705</li><li><strong>Published online:</strong> 12 Jan 2012</li><li><div><strong>Citing articles:</strong> 0</div></li><li><div class="articleUsage"><strong>Article Views:</strong> 27<div class="auPopUp"><div class="pointyEdge"></div>Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></div>
+<noscript><br/><div class="articleUsage">Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></noscript></li><li><div class="altmetricScore" data="10.1080/00288306.1990.10425705"></div></li></ul><div class="ft"><h6>Further Information</h6><ul class="entryLinks clear"><li class="firstEntryLink"><a href="/doi/abs/10.1080/00288306.1990.10425705">Abstract</a></li><li class="relatedArticleLink"><a href="/doi/mlt/10.1080/00288306.1990.10425705">
+
+                        Related articles
+
+                    </a></li><li></li></ul></div><div class="clear floatclear"></div></div></div><!--ARTICLE: primary_short--><div class="article original as2"><div class="gutter"><div class="field script_only"><input type="checkbox" name="doi" value="10.1080/00288306.1990.10425706" id="10.1080/00288306.1990.10425706" /></div><label for="10.1080/00288306.1990.10425706"><a class="entryTitle" href="/doi/abs/10.1080/00288306.1990.10425706"><h3>Fish-bearing Aztec Siltstone (Devonian) in the Cook Mountains, Antarctica</h3></a></label><span class="subtitle"></span><h4><span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Woolfe%2C+K+J">K. J. Woolfe</a></span>, <span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Long%2C+J+A">J. A. Long</a></span>, <span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Bradshaw%2C+M+A">M. A. Bradshaw</a></span>, <span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Harmsen%2C+F+J">F. J. Harmsen</a></span> &amp; <span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Kirkbride%2C+M+P">M. P. Kirkbride</a></span><br />pages 511-514</h4><div class="access accessmodule access_free"><a class="pdf last" target="_blank" href="/doi/pdf/10.1080/00288306.1990.10425706">Download full text</a><div class="accessIconWrapper access_free accessIcon">Free access</div></div><ul class="clear doimetalist"><li><strong>DOI:</strong>10.1080/00288306.1990.10425706</li><li><strong>Published online:</strong> 12 Jan 2012</li><li><div><strong>Citing articles:</strong> 0</div></li><li><div class="articleUsage"><strong>Article Views:</strong> 55<div class="auPopUp"><div class="pointyEdge"></div>Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></div>
+<noscript><br/><div class="articleUsage">Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></noscript></li><li><div class="altmetricScore" data="10.1080/00288306.1990.10425706"></div></li></ul><div class="ft"><h6>Further Information</h6><ul class="entryLinks clear"><li class="firstEntryLink"><a href="/doi/abs/10.1080/00288306.1990.10425706">Abstract</a></li><li class="relatedArticleLink"><a href="/doi/mlt/10.1080/00288306.1990.10425706">
+
+                        Related articles
+
+                    </a></li><li></li></ul></div><div class="clear floatclear"></div></div></div><!--ARTICLE: primary_letter--><div class="article original as2"><h2 class="clear tocheading"><span class="subj-group">Letters to the Editor </span></h2><div class="gutter"><div class="field script_only"><input type="checkbox" name="doi" value="10.1080/00288306.1990.10425707" id="10.1080/00288306.1990.10425707" /></div><label for="10.1080/00288306.1990.10425707"><a class="entryTitle" href="/doi/abs/10.1080/00288306.1990.10425707"><h3>A reassessment of evidence for an ancient landslide at Orewa</h3></a></label><span class="subtitle"></span><h4><span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Mansergh%2C+G+D">G. D. Mansergh</a></span> &amp; <span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Schofield%2C+J+C">J. C. Schofield</a></span><br />pages 515-524</h4><div class="access accessmodule access_free"><a class="pdf last" target="_blank" href="/doi/pdf/10.1080/00288306.1990.10425707">Download full text</a><div class="accessIconWrapper access_free accessIcon">Free access</div></div><ul class="clear doimetalist"><li><strong>DOI:</strong>10.1080/00288306.1990.10425707</li><li><strong>Published online:</strong> 12 Jan 2012</li><li><div><strong>Citing articles:</strong> 0</div></li><li><div class="articleUsage"><strong>Article Views:</strong> 44<div class="auPopUp"><div class="pointyEdge"></div>Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></div>
+<noscript><br/><div class="articleUsage">Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></noscript></li><li><div class="altmetricScore" data="10.1080/00288306.1990.10425707"></div></li></ul><div class="ft"><h6>Further Information</h6><ul class="entryLinks clear"><li class="firstEntryLink"><a href="/doi/abs/10.1080/00288306.1990.10425707">First Page Preview</a></li><li class="relatedArticleLink"><a href="/doi/mlt/10.1080/00288306.1990.10425707">
+
+                        Related articles
+
+                    </a></li><li></li></ul></div><div class="clear floatclear"></div></div></div><!--ARTICLE: book-review--><div class="article original as2"><h2 class="clear tocheading"><span class="subj-group">Book Reviews </span></h2><div class="gutter"><div class="field script_only"><input type="checkbox" name="doi" value="10.1080/00288306.1990.10425708" id="10.1080/00288306.1990.10425708" /></div><label for="10.1080/00288306.1990.10425708"><a class="entryTitle" href="/doi/abs/10.1080/00288306.1990.10425708"><h3>Book reviews</h3></a></label><span class="subtitle"></span><h4><span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Warnke%2C+D+A">D. A. Warnke</a></span>, <span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Gamble%2C+J">John Gamble</a></span> &amp; <span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Ballance%2C+P+F">Peter F. Ballance</a></span><br />pages 525-527</h4><div class="access accessmodule access_free"><a class="pdf last" target="_blank" href="/doi/pdf/10.1080/00288306.1990.10425708">Download full text</a><div class="accessIconWrapper access_free accessIcon">Free access</div></div><ul class="clear doimetalist"><li><strong>DOI:</strong>10.1080/00288306.1990.10425708</li><li><strong>Published online:</strong> 12 Jan 2012</li><li><div><strong>Citing articles:</strong> 0</div></li><li><div class="articleUsage"><strong>Article Views:</strong> 11<div class="auPopUp"><div class="pointyEdge"></div>Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></div>
+<noscript><br/><div class="articleUsage">Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></noscript></li><li><div class="altmetricScore" data="10.1080/00288306.1990.10425708"></div></li></ul><div class="ft"><h6>Further Information</h6><ul class="entryLinks clear"><li class="firstEntryLink"><a href="/doi/abs/10.1080/00288306.1990.10425708">First Page Preview</a></li><li class="relatedArticleLink"><a href="/doi/mlt/10.1080/00288306.1990.10425708">
+
+                        Related articles
+
+                    </a></li><li></li></ul></div><div class="clear floatclear"></div></div></div><!--ARTICLE: miscellaneous--><div class="article original as2"><h2 class="clear tocheading"><span class="subj-group">Miscellany </span></h2><div class="gutter"><div class="field script_only"><input type="checkbox" name="doi" value="10.1080/00288306.1990.10425709" id="10.1080/00288306.1990.10425709" /></div><label for="10.1080/00288306.1990.10425709"><a class="entryTitle" href="/doi/abs/10.1080/00288306.1990.10425709"><h3>New Zealand thesis in Earth Sciences</h3></a></label><span class="subtitle"></span><h4><span class="hlFld-ContribAuthor"><a href="/action/doSearch?Contrib=Wells%2C+P+E">Patricia E. Wells</a></span><br />page 527</h4><div class="access accessmodule access_free"><a class="pdf last" target="_blank" href="/doi/pdf/10.1080/00288306.1990.10425709">Download full text</a><div class="accessIconWrapper access_free accessIcon">Free access</div></div><ul class="clear doimetalist"><li><strong>DOI:</strong>10.1080/00288306.1990.10425709</li><li><strong>Published online:</strong> 12 Jan 2012</li><li><div><strong>Citing articles:</strong> 0</div></li><li><div class="articleUsage"><strong>Article Views:</strong> 22<div class="auPopUp"><div class="pointyEdge"></div>Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></div>
+<noscript><br/><div class="articleUsage">Article usage statistics combine cumulative total PDF downloads and full-text HTML views from publication date (but no earlier than 25 Jun 2011, launch date of this website) to 11 Jul 2015. Article views are only counted from this site. Although these data are updated every 24 hours, there may be a 48-hour delay before the most recent numbers are available.</div></noscript></li><li><div class="altmetricScore" data="10.1080/00288306.1990.10425709"></div></li></ul><div class="ft"><h6>Further Information</h6><ul class="entryLinks clear"><li class="firstEntryLink"><a href="/doi/abs/10.1080/00288306.1990.10425709">First Page Preview</a></li><li class="relatedArticleLink"><a href="/doi/mlt/10.1080/00288306.1990.10425709">
+
+                        Related articles
+
+                    </a></li><li></li></ul></div><div class="clear floatclear"></div></div></div>
+
+                
+
+
+
+<div class="actions script_only">
+    <div class="gutter clear">
+
+        <div class="markall">
+            <input type="checkbox" name="markall" id="markall1" class="markall" />
+            <label for="markall1">
+                To select/unselect all items click here
+            </label>
+        </div>
+
+        <div class="choose dropDownLabel">
+            <a href="#">
+                Choose an action
+            </a>
+        </div>
+        <div class="dropDown" style="top: 22px;right:8px;width:123px">
+            <ul>
+                <li>
+                    <a href="#" onclick="submitArticles(document.frmAbs, '/personalize/addFavoritePublication')">
+                        Add to shortlist
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#" onclick="submitArticles(document.frmAbs, '/action/showCitFormats')">
+                        Download citation
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+                <input type="hidden" name="href" value="/toc/tnzg20/33/3" />
+                <input type="hidden" name="title" value="New Zealand Journal of Geology and Geophysics (1990)" />
+            </form>
+        </div>
+
+        <div id="altmetricsPopup"></div>
+        <div id="imprintJournal" class="hidden">
+                
+                        tandf
+                    
+        </div>
+        <div id="altmetricKey" class="hidden">be0ef6915d1b2200a248b7195d01ef22</div>
+
+                </div>
+            </div>
+            
+                
+
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
+
+
+
+
+
+
+
+<div id="unit3" class="unit last">
+    
+
+
+
+
+
+
+    
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] ||
+                        function() {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date();
+                a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-3062505-5', 'auto');
+            ga('send', 'pageview');
+        </script>
+    
+
+
+    
+        
+
+
+
+
+
+
+    <div id="newsArticles" class="module widget">
+        <h2>
+            Journal news
+        </h2>
+        <ul>
+            
+                <li>
+                    
+
+
+
+
+
+<b>2013 Impact Factor of 1.492</b>
+
+
+
+
+                </li>
+            
+
+            
+                <li>
+                    
+
+
+
+
+
+<a href="http://explore.tandfonline.com/content/est/tnzg">Discover the New Zealand Journal of Geology & Geophysics Editors Choice Collection</a>
+
+
+
+
+                </li>
+            
+        </ul>
+    </div>
+
+
+        <div id="widgetJournalAd">
+           <!-- placeholder id=null, description=Journal right column top --><a href="/action/clickThrough?id=5930&url=%2Fr%2Fsubjectsample-earthsciences&loc=%2Ftoc%2Ftnzg20%2F33%2F3&pubId=45132587"><img src="/sda/5930/JournalAd-Sample-Our-Jornals-Earth-Sciences-journals.gif" width="200" height="70" alt="Sample our Earth Sciences journals, sign in here to start your access, 2013 & 2014 volumes FREE to you for 14 days"/>
+</a>
+        </div>
+    
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="relatedArticles" class="rart module widget">
+        <h2>
+            
+        </h2>
+        <div class="gutter">
+            <div id="relatedArticlesJQueryTab" class="jqueryTab tabs clear">
+
+                
+                    <ul class="tabsNav clear">
+                        <li class="active" id="readTab">
+                            <a class='jslink' href="#read">
+                                Most read
+                            </a>
+                        </li>
+
+                        <li class="last " id="citedTab">
+                            <a class='jslink' href="#cited">
+                                Most cited
+                            </a>
+                        </li>
+                    </ul>
+                
+
+                <div class="tabsPanel articleSummaries " id="readPanel">
+                    <ul>
+                        
+                            <!-- Most Read goes here ... -->
+                        
+
+
+
+
+        <ul>
+            
+                
+
+
+
+
+
+
+
+    
+    <li>
+        <a target="" href="http://www.tandfonline.com/doi/full/10.1080/00288306.2011.641182">The M<sub>w</sub> 6.2 Christchurch earthquake of February 2011: preliminary report</a>
+        
+        
+        <span class="author">
+            A Kaiser, et al.
+        </span>
+        
+        <div class="arCoverdate">
+            
+                       Volume 55, Issue 1, 2012
+                
+        </div>
+    </li>
+
+            
+                
+
+
+
+
+
+
+
+    
+    <li>
+        <a target="" href="http://www.tandfonline.com/doi/abs/10.1080/00288306.1969.10420231">Relationships between grain size, size-sorting, and foreshore slope on mixed sand - shingle beaches</a>
+        
+        
+        <span class="author">
+            R. F. McLean, et al.
+        </span>
+        
+        <div class="arCoverdate">
+            
+                       Volume 12, Issue 1, 1969
+                
+        </div>
+    </li>
+
+            
+                
+
+
+
+
+
+
+
+    
+    <li>
+        <a target="" href="http://www.tandfonline.com/doi/full/10.1080/00288306.2012.697472">Fault slip models of the 2010&#x2013;2011 Canterbury, New Zealand, earthquakes from geodetic data  and observations of postseismic ground deformation</a>
+        
+        
+        <span class="author">
+            John Beavan, et al.
+        </span>
+        
+        <div class="arCoverdate">
+            
+                       Volume 55, Issue 3, 2012
+                
+        </div>
+    </li>
+
+            
+                
+
+
+
+
+
+
+
+    
+    <li>
+        <a target="" href="http://www.tandfonline.com/doi/abs/10.1080/00288306.1970.10418211">Detrital sedimentary rock classification and nomenclature for use in New Zealand</a>
+        
+        
+        <span class="author">
+            R. L. Folk, et al.
+        </span>
+        
+        <div class="arCoverdate">
+            
+                       Volume 13, Issue 4, 1970
+                
+        </div>
+    </li>
+
+            
+                
+
+
+
+
+
+
+
+    
+    <li>
+        <a target="" href="http://www.tandfonline.com/doi/abs/10.1080/00288300709509842">Investigation of the role of gas hydrates in continental slope stability west of Fiordland, New Zealand</a>
+        
+        
+        <span class="author">
+            Gareth J. Crutchley, et al.
+        </span>
+        
+        <div class="arCoverdate">
+            
+                       Volume 50, Issue 4, 2007
+                
+        </div>
+    </li>
+
+            
+        </ul>
+        
+    
+                        
+                            <li class="more">
+                                <a href="/action/showMostReadArticles?journalCode=tnzg20">
+                                    More
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </div>
+                <div class="tabsPanel articleSummaries hide" id="citedPanel">
+                    <ul>
+                        
+
+                        <!-- Most Cited Goes here ... -->
+                        
+
+
+
+
+        <ul>
+            
+                
+
+
+
+
+
+
+
+    
+    <li>
+        <a target="" href="http://www.tandfonline.com/doi/abs/10.1080/00288306.1996.9514690">Reconnaissance sandstone geochemistry, provenance, and tectonic setting of the lower Paleozoic terranes of the West Coast and Nelson, New Zealand</a>
+        
+        
+        <span class="author">
+            B. P. Roser, et al.
+        </span>
+        
+        <div class="arCoverdate">
+            
+                       Volume 39, Issue 1, 1996
+                
+        </div>
+    </li>
+
+            
+                
+
+
+
+
+
+
+
+    
+    <li>
+        <a target="" href="http://www.tandfonline.com/doi/abs/10.1080/00288306.2000.9514913">Tectonic reconstructions of New Zealand: 40 Ma to the Present</a>
+        
+        
+        <span class="author">
+            Peter R. King
+        </span>
+        
+        <div class="arCoverdate">
+            
+                       Volume 43, Issue 4, 2000
+                
+        </div>
+    </li>
+
+            
+                
+
+
+
+
+
+
+
+    
+    <li>
+        <a target="" href="http://www.tandfonline.com/doi/full/10.1080/00288306.2012.697472">Fault slip models of the 2010&#x2013;2011 Canterbury, New Zealand, earthquakes from geodetic data  and observations of postseismic ground deformation</a>
+        
+        
+        <span class="author">
+            John Beavan, et al.
+        </span>
+        
+        <div class="arCoverdate">
+            
+                       Volume 55, Issue 3, 2012
+                
+        </div>
+    </li>
+
+            
+                
+
+
+
+
+
+
+
+    
+    <li>
+        <a target="" href="http://www.tandfonline.com/doi/full/10.1080/00288306.2011.641182">The M<sub>w</sub> 6.2 Christchurch earthquake of February 2011: preliminary report</a>
+        
+        
+        <span class="author">
+            A Kaiser, et al.
+        </span>
+        
+        <div class="arCoverdate">
+            
+                       Volume 55, Issue 1, 2012
+                
+        </div>
+    </li>
+
+            
+                
+
+
+
+
+
+
+
+    
+    <li>
+        <a target="" href="http://www.tandfonline.com/doi/abs/10.1080/00288300909509883">Age and isotopic characterisation of metasedimentary rocks from the Torlesse Supergroup and Waipapa Group in the central North Island, New Zealand</a>
+        
+        
+        <span class="author">
+            C. J. Adams, et al.
+        </span>
+        
+        <div class="arCoverdate">
+            
+                       Volume 52, Issue 2, 2009
+                
+        </div>
+    </li>
+
+            
+        </ul>
+        
+    
+                        
+                            <li class="more">
+                                <a href="/action/showMostCitedArticles?journalCode=tnzg20">
+                                    More
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        if (!$.fn.jScrollPane) document.write('<script src="/templates/jsp/js/jquery.jscrollpane.min.js"></' + 'script><script src="/templates/jsp/js/jquery.mousewheel.js"></' + 'script>');
+        $(document).ready(function () {
+            var as = $('.articleSummaries');
+            as.css({overflow:'hidden', maxHeight:'400px'}).children().addClass('scrollable');
+            as.jScrollPane({showArrows:true, horizontalGutter:10});
+        })
+    </script>
+
+
+        
+
+    <!--  Move the editors choice logic into a separate page-->
+    
+
+
+    
+
+        <!-- ads module -->
+        <div class="ad module">
+            <!-- Literatum Advertisement -->
+            <!-- width:200 -->
+            <!-- placeholder id=null, description=Journal right column 1 -->
+            <!-- /Literatum Advertisement -->
+        </div>
+
+        <div class="ad module">
+            <!-- Literatum Advertisement -->
+            <!-- width:200 -->
+            <!-- placeholder id=null, description=Journal right column 2 -->
+            <!-- /Literatum Advertisement -->
+        </div>
+
+        <div class="ad module">
+            <!-- Literatum Advertisement -->
+            <!-- width:200 -->
+            <!-- placeholder id=null, description=Journal right column 3 --><a href="/action/clickThrough?id=6503&url=http%3A%2F%2Fexplore.tandfonline.com%2Fcontent%2Fest%2Finternational-year-of-soils&loc=%2Ftoc%2Ftnzg20%2F33%2F3&pubId=45132587">
+  <img src="/sda/6503/JournalAd-Access-IYSlcss-200x185.gif" width="200" height="185" alt="International Year of Soils 2015"/>
+</a>
+            <!-- /Literatum Advertisement -->
+        </div>
+
+        <div class="ad module">
+            <!-- Literatum Advertisement -->
+            <!-- width:200 -->
+            <!-- placeholder id=null, description=Journal right column 4 --><a href="/action/clickThrough?id=5869&url=http%3A%2F%2Ftandf.msgfocus.com%2Fk%2FTandf%2Flibrary_lantern&loc=%2Ftoc%2Ftnzg20%2F33%2F3&pubId=45132587">
+  <img src="/sda/5869/JournalAd-Announce-LibraryLantern-200x185.gif" width="200" height="185" alt="Library Lantern - sign up to receive newsletters straight to your inbox"/>
+</a>
+
+
+            <!-- /Literatum Advertisement -->
+        </div>
+
+
+        <!-- /ads module -->
+    
+</div>
+            
+        </div>
+            </div>
+            
+                <div class="secondarySubjects module grid3 clear">
+<div class="subUnit">
+    <h3>Librarians</h3>
+    
+
+
+
+
+
+
+
+
+
+
+<ul>
+    <li>
+        
+
+
+
+
+    
+
+
+        <a href="/page/librarians">
+            Librarians' area
+        </a>
+    
+
+    </li>
+
+    <li>
+        
+
+
+
+
+    
+
+
+        <a href="/page/librarians/pricing">
+            Pricing
+        </a>
+    
+
+    </li>
+
+    <li>
+        
+
+
+
+
+    
+
+
+        <span class="link_disabled" title="disabled link">
+            Institutional account
+        </span>
+    
+
+    </li>
+    
+    <li>
+        
+
+
+
+
+    
+
+
+        <span class="link_disabled" title="disabled link">
+            Access entitlements
+        </span>
+    
+
+    </li>
+
+    <li>
+        
+
+
+
+
+    
+
+
+        <span class="link_disabled" title="disabled link">
+            Co-branding
+        </span>
+    
+
+    </li>
+
+    <li>
+        
+
+
+
+
+    
+
+
+        <span class="link_disabled" title="disabled link">
+            IP ranges
+        </span>
+    
+
+    </li>
+
+    <li>
+        
+
+
+
+
+    
+
+
+        <span class="link_disabled" title="disabled link">
+            Link resolver preferences
+        </span>
+    
+
+    </li>
+
+    <li>
+        
+
+
+
+
+    
+
+
+        <span class="link_disabled" title="disabled link">
+            Usage reports
+        </span>
+    
+
+    </li>
+</ul>
+
+</div>
+<div class="subUnit"><h3>Authors &amp; Editors</h3><ul><li><a href="/page/authors/book"> Book authors </a></li><li><a href="http://journalauthors.tandf.co.uk/" target="_blank"> Journal authors </a></li><li><a href="http://tandfencys.com/" target="_blank"> Reference work authors </a></li><li><a href="/page/authors/editors"> Editors </a></li></ul></div><div class="subUnit"><h3>Societies</h3><ul><li><a href="http://www.tandf.co.uk/journals/society/whodowepublish.asp" target="_blank"> Current partners </a></li><li><a href="http://www.tandf.co.uk/journals/society/" target="_blank"> Publish with us </a></li></ul></div><div class="subUnit"><h3>Help &amp; Information</h3><ul><li><a href="/page/help"> Help </a></li><li><a href="/page/help/faqs"> FAQs </a></li><li><a href="/action/contactUs"> Contact us </a></li><li><a href="http://newsroom.taylorandfrancisgroup.com" target="_blank">Press releases</a></li></ul></div>
+<div class="subUnit publishers last">
+    <h3>Taylor &amp; Francis Group</h3>
+    <ul>
+        <li class="tandf">
+
+
+
+
+
+    
+
+
+<a class="tandf" href="http://www.taylorandfrancis.com" target="_blank">
+    <img alt="Taylor & Francis" src="/userimages/1658/banner">
+</a></li>
+        <li class="routledge">
+
+
+
+
+
+    
+
+
+<a class="rout" href="http://www.routledge.com" target="_blank">
+    <img alt="Routledge" src="/userimages/1659/banner">
+</a></li>
+        <li class="psychologyPress">
+
+
+
+
+
+    
+
+
+<a class="psych" href="http://www.psypress.com" target="_blank">
+    <img alt="Psychology Press" src="/userimages/1660/banner">
+</a></li>
+        <li class="crcPress">
+
+
+
+
+
+    
+
+
+<a class="crc" href="http://www.crcpress.com" target="_blank">
+    <img alt="CRC Press" src="/userimages/1749/banner">
+</a></li>
+        <li class="last">
+
+
+
+
+
+    
+
+
+<a class="garl" href="http://www.garlandscience.com" target="_blank">
+    <img alt="Garland Science" src="/userimages/2233/banner">
+</a></li>
+    </ul>
+</div></div>
+            
+        </div>
+    </div>
+    <div id="ft">
+<div class="section"> <div id="siteInfo" class="nav"> <ul class="clear"> <li> <a href="/page/privacy-policy"> Privacy Policy &amp; Cookies </a> </li> <li> <a href="/page/terms-and-conditions"> Terms &amp; Conditions </a> </li> <li class="last"> <a href="/page/accessibility"> Accessibility </a> </li> </ul> </div> <div class="credits"> <p class="left"> Powered by <a href="http://www.atypon.com" target="_blank">Atypon&#0174; Literatum</a> </p> <p class="right"> &copy; <a href="/page/terms-and-conditions" target="_self">Informa UK Limited, an Informa Group Company </a><br/> </p> <div class="clear"> </div> </div> </div></div>
+</div>
+
+
+
+
+
+
+    
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+--2015-07-13 19:01:18--  http://www.tandfonline.com/toc/tnzm20/48/2
+Resolving www.tandfonline.com (www.tandfonline.com)... 65.156.1.60
+Connecting to www.tandfonline.com (www.tandfonline.com)|65.156.1.60|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://www.tandfonline.com/toc/tnzm20/48/2?cookieSet=1 [following]
+--2015-07-13 19:01:19--  http://www.tandfonline.com/toc/tnzm20/48/2?cookieSet=1
+Reusing existing connection to www.tandfonline.com:80.
+HTTP request sent, awaiting response... 302 Found
+Location: http://www.tandfonline.com/toc/tnzm20/48/2 [following]
+--2015-07-13 19:01:19--  http://www.tandfonline.com/toc/tnzm20/48/2
+Reusing existing connection to www.tandfonline.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘2’
+
+     0K .......... .......... .......... .......... ..........  102K
+    50K .......... .......... .......... ....                   217K=0.7s
+
+2015-07-13 19:01:23 (130 KB/s) - ‘2’ saved [86770]
+

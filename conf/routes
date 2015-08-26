@@ -1,0 +1,54 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET                          /                            controllers.Application.index
+GET                          /meta/prepare                controllers.Application.prepareMetadata
+GET                          /meta/insertall              controllers.Application.insertMetadataAll
+GET                          /meta/insert/:dbid           controllers.Application.insertMetadata(dbid: Long)
+GET                          /meta/delete/:uuid           controllers.Application.deleteByUUID(uuid: String)
+GET                          /meta/deleteall              controllers.Application.emptyCatalogue
+
+GET                          /vocab/listdb                controllers.JenaSparqlLink.listAllTerms
+GET                          /vocab/getbylabel            controllers.JenaSparqlLink.findTermPref(preflabel: String)
+GET                          /vocab/getbyid               controllers.JenaSparqlLink.findTermId(termid: Long)
+GET                          /vocab/loadcsv/:vocab        controllers.JenaSparqlLink.loadVocab(vocab: String)
+
+GET                          /vocab/spq/1                 controllers.JenaSparqlLink.querySparqlTest1
+GET                          /vocab/rdf/:vocab            controllers.JenaSparqlLink.exportAsRDF(vocab: String)
+
+GET                          /meta/compare1               controllers.WordProcessing.compareTest1
+GET                          /meta/compare2               controllers.WordProcessing.compare2
+
+GET                          /journal/suckem              controllers.JournalTest.getallfromweb
+GET                          /journal/analyse             controllers.JournalTest.analyse
+GET                          /journal/zerparser           controllers.JournalTest.zerParser
+GET                          /journal/download            controllers.JournalTest.downloadPdfs
+
+GET                          /royal/royalin               controllers.RoyalTest.royalAbsLoader
+GET                          /royal/parse1                controllers.RoyalTest.royalParser1
+GET                          /royal/parse2                controllers.RoyalTest.royalParse2
+GET                          /royal/pdflist               controllers.RoyalTest.pdfLoadList
+GET                          /royal/loadfulltext          controllers.RoyalTest.royalFullTextLoader
+
+GET                          /royal/suckem                controllers.RoyalTest.getRoyalfromweb
+GET                          /royal/loadfromfsmarine      controllers.RoyalTest.loadFromFSMarine
+GET                          /royal/loadfromfsgeol        controllers.RoyalTest.loadFromFSGeol
+
+GET                          /sos/capa2proc               controllers.SosHarvest.getcapa
+GET                          /sos/foi                     controllers.SosHarvest.getFeaturesAndSave
+GET                          /sos/da                      controllers.SosHarvest.getDaMemebrsAndSave
+GET                          /sos/getobs/:procnum         controllers.SosHarvest.getObsForProc(procnum: Long)
+
+# more analytics
+GET                          /geo/loadandsave             controllers.Geoparse.loadAndSaveGazetteer
+GET                          /geo/loadarticles            controllers.Geoparse.loadAndSaveArticles
+GET                          /geo/parse1                  controllers.Geoparse.parse1
+GET                          /geo/parse2                  controllers.Geoparse.parse2
+
+# more analytics
+GET                          /cassandra/transfer          controllers.CassandraCtl.loadAndSave
+
+# Map static resources from the /public folder to the /assets URL path
+GET                          /assets/*file                controllers.Assets.at(path="/public", file)
