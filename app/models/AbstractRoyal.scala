@@ -194,12 +194,26 @@ object AbstractRoyal extends ConfigCassandraCluster {
     val JOURNALNAME = if (abs.fulltext.contains("New Zealand Journal of Marine and Freshwater Research")) {
       JOURNAL_MARINE
     } else {
-      if (abs.fulltext.contains("Journal of Geology and Geophysics")) {
+      if (abs.fulltext.contains("Journal of Geology and Geophysics") ) {
         JOURNAL_GEOLOGY
       } else {
         JOURNAL_MARINE
       }
     }
+
+    val execFuture = session.executeAsync(preparedStatement.bind(
+      abs.articleid.asInstanceOf[java.lang.Long], JOURNALNAME, abs.authortitle,
+      abs.textabs, abs.author, abs.title, abs.year.asInstanceOf[java.lang.Long], abs.arturl, abs.fulltext.getOrElse("")))
+  }
+
+  def insertGeologyF(abs: AbstractRoyal) : Unit = {
+
+    val preparedStatement = session.prepare( s"""INSERT INTO ${CFKeys.articles}
+           (articleid,journal,authortitle,textabs,author,title,year,arturl,fulltext)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);""")
+
+    // real bad
+    val JOURNALNAME = JOURNAL_GEOLOGY
 
     val execFuture = session.executeAsync(preparedStatement.bind(
       abs.articleid.asInstanceOf[java.lang.Long], JOURNALNAME, abs.authortitle,

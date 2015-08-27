@@ -64,8 +64,7 @@ object RoyalTest extends Controller {
           .withQueryString("cookieSet" -> "1")
           .get()
           .map {
-          response =>
-          {
+          response => {
             // val matcher = new scala.util.matching.Regex(".*volume_id=(\\d{1,2})\">Vol (\\d{1,2}) (\\d{4}).*", "url", "volnum", "year")
             // val thingy = for (matcher(url, volnum, year) <- matcher findAllIn response.body) yield (url, volnum, year)
             // val tlist = thingy.toList
@@ -87,8 +86,8 @@ object RoyalTest extends Controller {
             }
 
             // for ((jurl, voln, year) <- tlist) {
-              // Logger.debug(s"$jurl $voln $year")
-              // createNewQueries(jurl, voln, year)
+            // Logger.debug(s"$jurl $voln $year")
+            // createNewQueries(jurl, voln, year)
             //}
 
             s"articles found: ${mydata.size()} in issue $goUrl"
@@ -176,11 +175,11 @@ object RoyalTest extends Controller {
 
     val contents = Process("ls -1 /home/akmoch/dev/build/lucene-hydroabstracts-scala/misc/royal-files/full-art/").lineStream
 
-    contents.foreach{ line =>
+    contents.foreach { line =>
 
       val html = scala.io.Source.fromFile(s"${path}${line}").mkString
       RawRoyalPage.insert(RawRoyalPage(counter, html, line, "1", "2000"))
-      counter = counter+1
+      counter = counter + 1
     }
 
     Ok(views.html.index(s"file system source"))
@@ -363,7 +362,7 @@ object RoyalTest extends Controller {
         }
 
 
-        val yesDoIt = arts.filter{ article =>
+        val yesDoIt = arts.filter { article =>
           article.authortitle.equals(authortitle)
         }
         if (yesDoIt.length == 1) {
@@ -371,7 +370,7 @@ object RoyalTest extends Controller {
           val updatedArticle = AbstractRoyal(
             matchArt.articleid,
             matchArt.authortitle,
-            matchArt.textabs.replaceFirst("Summary ",""),
+            matchArt.textabs.replaceFirst("Summary ", ""),
             author,
             title,
             matchArt.year,
@@ -411,9 +410,9 @@ object RoyalTest extends Controller {
 
     val contents = Process("ls -1 /home/akmoch/dev/build/lucene-hydroabstracts-scala/misc/royal-files/tesseracts/").lineStream
 
-    contents.foreach{ line =>
-      val artDoi = line.replace("-out-300.txt","")
-      val yesDoIt = arts.filter{ article =>
+    contents.foreach { line =>
+      val artDoi = line.replace("-out-300.txt", "")
+      val yesDoIt = arts.filter { article =>
         article.arturl.endsWith(artDoi)
       }
       if (yesDoIt.length == 1) {
@@ -437,6 +436,114 @@ object RoyalTest extends Controller {
     }
 
     Ok(views.html.index(s"royal full text file system sourced ${counter}"))
+
+  }
+
+  def geolAbsLoader = Action {
+
+    var counter = 0
+    val startNum = 10000
+    import sys.process._
+    val path = "/home/akmoch/dev/build/lucene-hydroabstracts-scala/misc/royal-files/full-art-geol/"
+
+    import scala.language.postfixOps
+
+    val contents = Process("ls -1 /home/akmoch/dev/build/lucene-hydroabstracts-scala/misc/royal-files/full-art-geol/").lineStream
+
+    contents.foreach { line =>
+
+      val htmlText = scala.io.Source.fromFile(s"${path}${line}").mkString
+
+      try {
+
+        // dirty preps
+        val artIdent = line.replace("geo-abs-","").replace(".html","")
+
+        var articleid = counter + startNum
+        val journal = "New Zealand Journal of Geology and Geophysics"
+        var authortitle = ""
+        var textabs = ""
+        var author = ""
+        var title = ""
+        var year = 0l
+        var arturl = s"http://www.tandfonline.com/doi/abs/10.1080/${artIdent}"
+        var fulltext = ""
+
+        val matcher = new scala.util.matching.Regex(".*\\((\\d{4})\\).*", "year")
+
+        var baseurl = "http://www.tandfonline.com"
+        var fulltexturl = "http://www.tandfonline.com"
+
+        val doc: Document = Jsoup.parse(htmlText)
+
+        val links: Elements = doc.select("a.pdf")
+        val iter = links.iterator()
+        while (iter.hasNext) {
+          val elem = iter.next()
+          if (elem.hasText && elem.text().equalsIgnoreCase("Download full text")) {
+            // logger.debug(s"${elem.attr("href")} ${elem.text()}")
+            fulltexturl = baseurl + elem.attr("href")
+          }
+        }
+
+        // caused thingy
+        val shortUrl = doc.select("a.pdf").first.attr("href")
+        // arturl = baseurl + shortUrl
+        val title1 = doc.select("div.description").select("h1").text.trim
+
+        // <meta name="dc.Creator" content=" D. M.   Garner ">
+        val metas: Elements = doc.select("meta")
+        val miter = metas.iterator()
+        while (miter.hasNext) {
+          val elem = miter.next()
+          if (elem.hasAttr("property") && elem.attr("property").equalsIgnoreCase("og:description")) {
+            // logger.debug(s"${elem.attr("content")}")
+            authortitle = elem.attr("content")
+            val thingy = for (matcher(year) <- matcher findAllIn authortitle) yield (year)
+            if (thingy.hasNext) {
+              year = thingy.next().toLong
+            }
+          }
+          if (elem.hasAttr("name") && elem.attr("name").equalsIgnoreCase("dc.Title")) {
+            logger.debug(s"${elem.attr("content")} count $counter")
+            title = elem.attr("content").trim
+            if (!title1.equalsIgnoreCase(title)) {
+              // logger.info(s"diff title: $title || $title1 ")
+            }
+          }
+          if (elem.hasAttr("name") && elem.attr("name").equalsIgnoreCase("dc.Creator")) {
+            logger.debug(s"${elem.attr("content")}")
+            author = author + ", " + elem.attr("content")
+
+          }
+          if (elem.hasAttr("name") && elem.attr("name").equalsIgnoreCase("dc.Description")) {
+            // logger.debug(s"${elem.attr("content")}")
+            textabs = elem.attr("content")
+          }
+        }
+
+        val abs = AbstractRoyal(
+          articleid,
+          authortitle,
+          textabs,
+          author,
+          title,
+          year,
+          arturl,
+          Some(fulltext))
+
+        counter = counter + 1
+        AbstractRoyal.insertFull(abs)
+        AbstractRoyal.insertGeologyF(abs)
+
+      } catch {
+        case e: IllegalArgumentException => Logger.error("illegal arg. exception")
+        case e: IndexOutOfBoundsException => Logger.error("illegal state exception")
+        case e: NoSuchElementException => Logger.error("NoSuchElementException")
+        case e: java.io.IOException => Logger.error("IO exception")
+      }
+    }
+    Ok(views.html.index(s"file system source geology"))
 
   }
 }
