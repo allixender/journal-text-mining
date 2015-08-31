@@ -30,14 +30,14 @@ GET        /royal/royalin                 controllers.RoyalTest.royalAbsLoader
 GET        /royal/parse1                  controllers.RoyalTest.royalParser1
 GET        /royal/parse2                  controllers.RoyalTest.royalParse2
 GET        /royal/pdflist                 controllers.RoyalTest.pdfLoadList
-GET        /royal/loadfulltext            controllers.RoyalTest.royalFullTextLoader
+GET        /royal/loadfulltext            controllers.RoyalTest.royalFullTextLoader2
+# GET        /royal/loadgeolfulltext        controllers.RoyalTest.geolFullTextLoader
 
 GET        /royal/suckem                  controllers.RoyalTest.getRoyalfromweb
 GET        /royal/loadfromfsmarine        controllers.RoyalTest.loadFromFSMarine
 GET        /royal/loadfromfsgeol          controllers.RoyalTest.loadFromFSGeol
 
 GET        /royal/loadgeolabs             controllers.RoyalTest.geolAbsLoader
-# GET        /royal/loadgeolfulltext        controllers.RoyalTest.geolFullTextLoader
 
 GET        /sos/capa2proc                 controllers.SosHarvest.getcapa
 GET        /sos/foi                       controllers.SosHarvest.getFeaturesAndSave

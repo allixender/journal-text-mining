@@ -400,18 +400,18 @@ object RoyalTest extends Controller {
     Ok(views.html.index("downloading royal pdfs."))
   }
 
-  def royalFullTextLoader = Action {
+  def royalFullTextLoader2 = Action {
     var counter = 0
     val arts = AbstractRoyal.getAllWithParserUpdated
     import sys.process._
-    val path = "/home/akmoch/dev/build/lucene-hydroabstracts-scala/misc/royal-files/tesseracts/"
+    val path = "/home/akmoch/dev/build/lucene-hydroabstracts-scala/misc/royal-files/tesseracts-geol/"
 
     import scala.language.postfixOps
 
-    val contents = Process("ls -1 /home/akmoch/dev/build/lucene-hydroabstracts-scala/misc/royal-files/tesseracts/").lineStream
+    val contents = Process("ls -1 /home/akmoch/dev/build/lucene-hydroabstracts-scala/misc/royal-files/tesseracts-geol/").lineStream
 
     contents.foreach { line =>
-      val artDoi = line.replace("-out-300.txt", "")
+      val artDoi = line.replace("-out-300.txt", "").replace("geo-abs-","")
       val yesDoIt = arts.filter { article =>
         article.arturl.endsWith(artDoi)
       }
@@ -429,7 +429,7 @@ object RoyalTest extends Controller {
           Some(fulltextpiece))
         // logger.info(s"found article ${line} with ${matchArt.arturl} ")
         counter = counter + 1
-        AbstractRoyal.updateWithFullByID(updatedArticle)
+        // AbstractRoyal.updateWithFullByID(updatedArticle)
       } else {
         logger.warn(s"no found article for ${line}")
       }
