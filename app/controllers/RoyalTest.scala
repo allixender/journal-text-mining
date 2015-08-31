@@ -16,6 +16,11 @@ import models.GeoName
 
 object RoyalTest extends Controller {
 
+  import play.api.libs.concurrent.Execution.Implicits.defaultContext
+  import play.api.Play.current
+  import play.api.libs.ws._
+  import scala.collection.JavaConverters._
+
   // New Zealand Journal of Marine and Freshwater Research
   // http://www.tandfonline.com/loi/tnzm20
   // volumes 1 - 49, each 4 issues, 1967 - 2015
@@ -55,9 +60,8 @@ object RoyalTest extends Controller {
         val goUrl = s"${url}${tnzm20BaseUrl}/$issue/$num$sessAppend"
         println(s"map $goUrl")
 
-        import play.api.Play.current
-        import play.api.libs.ws._
-        import play.api.libs.concurrent.Execution.Implicits.defaultContext
+
+
         val futureResult: Future[String] = WS.url(goUrl)
           .withFollowRedirects(true)
           .withRequestTimeout(10000)
@@ -412,6 +416,7 @@ object RoyalTest extends Controller {
 
     contents.foreach { line =>
       val artDoi = line.replace("-out-300.txt", "").replace("geo-abs-","")
+
       val yesDoIt = arts.filter { article =>
         article.arturl.endsWith(artDoi)
       }
@@ -544,6 +549,60 @@ object RoyalTest extends Controller {
       }
     }
     Ok(views.html.index(s"file system source geology"))
+
+  }
+
+
+  def royalFullTextLoaderCassandra = Action {
+    var counter = 0
+    val arts = AbstractRoyal.getAllWithParserUpdated
+    import sys.process._
+    val path = "/home/akmoch/dev/build/lucene-hydroabstracts-scala/misc/royal-files/tesseracts-geol/"
+
+    import scala.language.postfixOps
+
+    val contents = Process("ls -1 /home/akmoch/dev/build/lucene-hydroabstracts-scala/misc/royal-files/tesseracts-geol/").lineStream
+
+    contents.foreach { line =>
+      val artDoi = line.replace("-out-300.txt", "").replace("geo-abs-","")
+
+      val yesDoIt = arts.filter { article =>
+        article.arturl.endsWith(artDoi)
+      }
+      if (yesDoIt.length == 1) {
+        // update the cassandra one
+        val casArt = AbstractRoyal.getByIdF(yesDoIt.head.articleid)
+        casArt.map { casArticleList =>
+          val casArticle = casArticleList.head
+          if (casArticleList.length == 1 && casArticle.articleid == yesDoIt.head.articleid) {
+
+            val fulltextpiece = scala.io.Source.fromFile(s"${path}${line}").mkString
+
+            val updatedArticle = AbstractRoyal(
+                casArticle.articleid,
+                casArticle.authortitle,
+                casArticle.textabs,
+                casArticle.author,
+                casArticle.title,
+                casArticle.year,
+                casArticle.arturl,
+                Some(fulltextpiece))
+
+            // AbstractRoyal.updateF(updatedArticle)
+            val retBool = AbstractRoyal.insertGeologyF(updatedArticle)
+            logger.info(s"retBool ${retBool} fulltextpiece of ${casArticle.articleid} = ${fulltextpiece.size}")
+
+          } else {
+            logger.warn(s"casArticleList.length ${casArticleList.length} casArticle.articleid ${casArticle.articleid} yesDoIt.head.articleid ${yesDoIt.head.articleid}")
+          }
+        }
+        counter = counter + 1
+      } else {
+        logger.warn(s"no found article for ${line}")
+      }
+    }
+
+    Ok(views.html.index(s"royal full text file system sourced ${counter}"))
 
   }
 }

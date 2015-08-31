@@ -31,7 +31,7 @@ GET        /royal/parse1                  controllers.RoyalTest.royalParser1
 GET        /royal/parse2                  controllers.RoyalTest.royalParse2
 GET        /royal/pdflist                 controllers.RoyalTest.pdfLoadList
 GET        /royal/loadfulltext            controllers.RoyalTest.royalFullTextLoader2
-# GET        /royal/loadgeolfulltext        controllers.RoyalTest.geolFullTextLoader
+GET        /royal/loadfulltextcassandra   controllers.RoyalTest.royalFullTextLoaderCassandra
 
 GET        /royal/suckem                  controllers.RoyalTest.getRoyalfromweb
 GET        /royal/loadfromfsmarine        controllers.RoyalTest.loadFromFSMarine

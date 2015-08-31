@@ -10,12 +10,14 @@ import com.datastax.driver.core.Row
 import com.datastax.driver.core.querybuilder.QueryBuilder
 import com.datastax.driver.core.querybuilder.QueryBuilder.{ eq => ceq }
 import com.datastax.driver.core.schemabuilder.SchemaBuilder
+import play.api.Logger._
 
 import play.api.Play.current
 import play.api.db.DB
 import service.{CFKeys, ConfigCassandraCluster}
 
 import scala.concurrent.Future
+import scala.util.{Success,Failure}
 
 case class AbstractRoyal(
                           articleid: Long,
@@ -206,7 +208,7 @@ object AbstractRoyal extends ConfigCassandraCluster {
       abs.textabs, abs.author, abs.title, abs.year.asInstanceOf[java.lang.Long], abs.arturl, abs.fulltext.getOrElse("")))
   }
 
-  def insertGeologyF(abs: AbstractRoyal) : Unit = {
+  def insertGeologyF(abs: AbstractRoyal) : Boolean = {
 
     val preparedStatement = session.prepare( s"""INSERT INTO ${CFKeys.articles}
            (articleid,journal,authortitle,textabs,author,title,year,arturl,fulltext)
@@ -217,13 +219,19 @@ object AbstractRoyal extends ConfigCassandraCluster {
 
     val execFuture = session.executeAsync(preparedStatement.bind(
       abs.articleid.asInstanceOf[java.lang.Long], JOURNALNAME, abs.authortitle,
-      abs.textabs, abs.author, abs.title, abs.year.asInstanceOf[java.lang.Long], abs.arturl, abs.fulltext.getOrElse("")))
+      abs.textabs, abs.author, abs.title, abs.year.asInstanceOf[java.lang.Long], abs.arturl, abs.fulltext.getOrElse("_none_")))
+
+    execFuture.onComplete{
+      case Success(_) => logger.info(s"success insert")
+      case Failure(e) => logger.error(s"error for ${e.getMessage}")
+    }
+    execFuture.isDone
   }
 
   /**
    * Cassandra delete Refactor, fire and forget
    */
-  def updateF(abs: AbstractRoyal) : Unit = {
+  def updateF(abs: AbstractRoyal) : Boolean = {
 
     val preparedStatement = session.prepare( s"""UPDATE ${CFKeys.articles}
            set journal = ?,
@@ -234,23 +242,27 @@ object AbstractRoyal extends ConfigCassandraCluster {
            year = ?,
            arturl = ?,
            fulltext = ?
-           where articleid = ?;""")
+           where articleid = ? and journal = ?;""")
 
     // real bad
-    val JOURNALNAME = if (abs.fulltext.contains("New Zealand Journal of Marine and Freshwater Research")) {
-      JOURNAL_MARINE
-    } else {
-      if (abs.fulltext.contains("Journal of Geology and Geophysics")) {
-        JOURNAL_GEOLOGY
-      } else {
-        JOURNAL_MARINE
-      }
-    }
+    val JOURNALNAME = JOURNAL_GEOLOGY
 
     val execFuture = session.executeAsync(preparedStatement.bind(
-      JOURNALNAME, abs.authortitle.asInstanceOf[java.lang.Long],
+      JOURNALNAME, abs.authortitle,
       abs.textabs, abs.author, abs.title, abs.year.asInstanceOf[java.lang.Long],
-      abs.arturl, abs.fulltext.getOrElse(""), abs.articleid.asInstanceOf[java.lang.Long]))
+      abs.arturl, abs.fulltext.getOrElse("_none_"), abs.articleid.asInstanceOf[java.lang.Long], JOURNAL_GEOLOGY))
+
+    // execFuture.onSuccess{
+    //   case _ => println("ok")
+    // }
+    // execFuture.onFailure{
+    //  case t => println("An error has occured: " + t.getMessage)
+    // }
+    execFuture.onComplete{
+      case Success(_) => logger.info(s"success insert")
+      case Failure(e) => logger.error(s"error for ${e.getMessage}")
+    }
+    execFuture.isDone
   }
 
   /**
